@@ -1,5 +1,4 @@
 import XLSX from "xlsx";
-// import json from "./generated/newGenerated.json";
 
 export const changeJsonToExcel = (json: any[]) => {
   let option = {
@@ -10,10 +9,3 @@ export const changeJsonToExcel = (json: any[]) => {
   XLSX.utils.book_append_sheet(exportBook, exportSheet, "sheetName");
   XLSX.writeFile(exportBook, "messages.xlsx");
 };
-
-// export const createExcelFile = (arrData: any) => {
-//   let exportBook = XLSX.utils.book_new();
-//   let exportSheet = XLSX.utils.aoa_to_sheet(arrData);
-//   XLSX.utils.book_append_sheet(exportBook, exportSheet, "sheetName");
-//   XLSX.writeFile(exportBook, "messages2.xlsx");
-// };
